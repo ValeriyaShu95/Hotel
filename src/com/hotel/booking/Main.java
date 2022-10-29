@@ -20,14 +20,15 @@ public class Main {
         Room room1 = new Room(2, 500, "yes");
         Room room2 = new Room(4267, 435, "yes");
         Room room3 = new Room(6887, 6090, "no");
+        Room room4 = new Room(22, 5020, "yes");
 
         Hotel hotel1 = new Hotel("Paris", new Room[]{room1, room2, room3});
-        Hotel hotel2 = new Hotel("Vok", new Room[]{room1, room2, room3});
+        Hotel hotel2 = new Hotel("Vok", new Room[]{room1, room2, room3, room4});
 
 
         Client[] clientArray = new Client[]{persone1, persone2};
         Hotel[] hotelArray = new Hotel[]{hotel1, hotel2};
-        Room[] roomArray = new Room[]{room1, room2, room3};
+        Room[] roomArray = new Room[]{room1, room2, room3, room4};
 
 
         for (; ; ) {
