@@ -12,12 +12,24 @@ public class Room {
     private Integer numberOfPeople;
     private Integer cost;
     private String free;
+    private Integer square;
 
-    public Room(Integer numberOfPeople, Integer cost, String free) {
+    public Integer getSquare() {
+        return square;
+    }
+
+    public Room(Integer square) {
+        this.square = square;
+    }
+
+
+    public Room(Integer numberOfPeople, Integer cost, String free, Integer square) {
         this.numberOfPeople = numberOfPeople;
         this.cost = cost;
         this.free = free;
+        this.square = square;
         this.roomId = count.incrementAndGet();
+
     }
 
     public Integer getNumberOfPeople() {
@@ -50,5 +62,9 @@ public class Room {
 
     public void setRoomId(int roomId) {
         this.roomId = roomId;
+    }
+
+    public void setSquare(Integer square) {
+        this.square = square;
     }
 }

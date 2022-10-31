@@ -17,10 +17,10 @@ public class Main {
         persone2.bill2 = billPersone2;
         // System.out.println(persone2.bill2.getAmmount());
 
-        Room room1 = new Room(2, 500, "yes");
-        Room room2 = new Room(4267, 435, "yes");
-        Room room3 = new Room(6887, 6090, "no");
-        Room room4 = new Room(22, 5020, "yes");
+        Room room1 = new Room(2, 500, "yes", 25);
+        Room room2 = new Room(4267, 435, "yes", 80);
+        Room room3 = new Room(6887, 6090, "no",60);
+        Room room4 = new Room(22, 5020, "yes", 100);
 
         Hotel hotel1 = new Hotel("Paris", new Room[]{room1, room2, room3});
         Hotel hotel2 = new Hotel("Vok", new Room[]{room1, room2, room3, room4});
@@ -70,9 +70,7 @@ public class Main {
                             System.out.println(elementHotel.getRoomId() + " " +
                                     "Стоимость номера: " + elementHotel.getCost() + " " +
                                     "Свободно: " + elementHotel.getFree() + " " +
-                                    "Количество человек: " + elementHotel.getNumberOfPeople());
-
-
+                                    "Количество человек: " + elementHotel.getNumberOfPeople() + " " + "Площадь номера: " + elementHotel.getSquare());
                         }
                     }
             }
