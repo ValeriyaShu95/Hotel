@@ -34,16 +34,16 @@ public class Main {
         for (; ; ) {
 
             System.out.print("Введите цифру, соответствующую имени: ");
-            for (Client element : clientArray) {
-                System.out.print(element.getPersoneId() + " " + "-" + " ");
-                System.out.print(element.getName() + ";" + " ");
+            for (Client elementClient : clientArray) {
+                System.out.print(elementClient.getPersoneId() + " " + "-" + " ");
+                System.out.print(elementClient.getName() + ";" + " ");
             }
             Scanner scanner = new Scanner(System.in);
             Integer nameId = scanner.nextInt();
 
-            for (Client element : clientArray) {
-                if (nameId == element.getPersoneId()) {
-                    System.out.println(element.getName());
+            for (Client elementName : clientArray) {
+                if (nameId == elementName.getPersoneId()) {
+                    System.out.println(elementName.getName());
                 }
 
                 //System.out.println(selectedPersone.getName()); // Lera
@@ -53,39 +53,41 @@ public class Main {
 
 
             System.out.println("Введите цифру, соответствующую отелю: ");
-            for (Hotel element : hotelArray) {
-                System.out.print(element.getHotelId() + " " + "-" + " ");
-                System.out.print(element.getHotelName() + ";" + " ");
+            for (Hotel elementHotel : hotelArray) {
+                System.out.print(elementHotel.getHotelId() + " " + "-" + " ");
+                System.out.print(elementHotel.getHotelName() + ";" + " ");
             }
             Scanner scanner2 = new Scanner(System.in);
             Integer hotelId = scanner.nextInt();
 
-            for (Hotel element : hotelArray) {
-                if (hotelId == element.getHotelId()) {
-                    System.out.println(element.getHotelName());
-                }
+            for (Hotel elementHotelName : hotelArray) {
+
+                    if (hotelId == elementHotelName.getHotelId()) {
+                        System.out.println(elementHotelName.getHotelName());
+                        System.out.println("Выберете цифру, соответствующую номеру:");
+                        for (Room elementHotel : elementHotelName.getRoomsList()) {
+
+                            System.out.println(elementHotel.getRoomId() + " " +
+                                    "Стоимость номера: " + elementHotel.getCost() + " " +
+                                    "Свободно: " + elementHotel.getFree() + " " +
+                                    "Количество человек: " + elementHotel.getNumberOfPeople());
+
+
+                        }
+                    }
             }
 
 
-            System.out.println("Выберете цифру, соответствующую номеру:");
-            for (Room element : roomArray) {
-                System.out.println(element.getRoomId() + " " +
-                        "Стоимость номера: " + element.getCost() + " " +
-                        "Свободно: " + element.getFree() + " " +
-                        "Количество человек: " + element.getNumberOfPeople());
-
-
-            }
 
             Scanner scanner3 = new Scanner(System.in);
             Integer roomId = scanner.nextInt();
 
-            for (Room element : roomArray) {
+            for (Room elementRoom : roomArray) {
 
-                if (roomId == element.getRoomId()) {
-                    System.out.println(element.getCost());
-                    System.out.println(element.getFree());
-                    System.out.println(element.getNumberOfPeople());
+                if (roomId == elementRoom.getRoomId()) {
+                    System.out.println(elementRoom.getCost());
+                    System.out.println(elementRoom.getFree());
+                    System.out.println(elementRoom.getNumberOfPeople());
 
 
                 }
