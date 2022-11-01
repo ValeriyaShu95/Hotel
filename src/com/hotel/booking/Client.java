@@ -20,12 +20,24 @@ public class Client {
     private String lastName;
     private String phoneNumber;
     private String email;
+    private String clientGgender;
 
-    public Client(String name, String lastName, String phoneNumber, String email) {
+
+
+    public String getClienGgender() {
+        return clientGgender;
+    }
+
+    public void setClienGgender(String clienGgender) {
+        this.clientGgender = clienGgender;
+    }
+
+    public Client(String name, String lastName, String phoneNumber, String email, String clientGgender) {
         this.name = name;
         this.lastName = lastName;
         this.phoneNumber = phoneNumber;
         this.email = email;
+        this.clientGgender = clientGgender;
         this.personeId = count.incrementAndGet();
 
 
