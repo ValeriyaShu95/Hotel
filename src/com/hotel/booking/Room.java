@@ -13,6 +13,18 @@ public class Room {
     private Integer cost;
     private String free;
     private Integer square;
+    private String gender;
+
+    public String getGender() {
+        return gender;
+    }
+
+
+
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
 
     public Integer getSquare() {
         return square;
@@ -23,11 +35,12 @@ public class Room {
     }
 
 
-    public Room(Integer numberOfPeople, Integer cost, String free, Integer square) {
+    public Room(Integer numberOfPeople, Integer cost, String free, Integer square, String gender) {
         this.numberOfPeople = numberOfPeople;
         this.cost = cost;
         this.free = free;
         this.square = square;
+        this.gender = gender;
         this.roomId = count.incrementAndGet();
 
     }
